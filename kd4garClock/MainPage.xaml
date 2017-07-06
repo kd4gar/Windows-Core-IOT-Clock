@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="kd4garClock.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kd4garClock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <CommandBar Background="SlateGray" IsOpen="True" Foreground="White" Name="MainNav" >
+            <CommandBar.Content>
+                <AppBarButton Icon="Mute" Visibility="Collapsed" Name="btnStopAlarm" Click="TurnOffAlarm_Click"/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Volume" Label="Alarms" Foreground="White"  Click="AlarmBarButton_Click" />
+            <AppBarButton Icon="Setting" Label="Settings" Click="SettingsButton_Click"/>
+            <AppBarButton Icon="Cancel" Label="Power" Click="PowerButton_Click"/>
+
+        </CommandBar>
+        <Viewbox Grid.Row="0"  Margin="30"  HorizontalAlignment="Stretch" Stretch="Uniform">
+            <TextBlock FontFamily="Segoe UI" x:Name="mainTime"  Text="" RequestedTheme="Dark" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        </Viewbox>
+        <Viewbox Grid.Row="1"  Margin="30"  HorizontalAlignment="Stretch" Stretch="Uniform">
+            <TextBlock FontFamily="Segoe UI" x:Name="mainDate"  Text="" RequestedTheme="Dark" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        </Viewbox>
+
+    </Grid>
+</Page>

@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="kd4garClock.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:kd4garClock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <CommandBar Background="SlateGray" IsOpen="True" Foreground="White" x:Name="MainNav" >
+            <CommandBar.Content>
+                <AppBarButton Icon="Mute" Visibility="Collapsed" x:Name="btnStopAlarm" Click="TurnOffAlarm_Click"/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Volume" Label="Alarms" Foreground="White"  Click="AlarmBarButton_Click" />
+            <AppBarButton Icon="Setting" Label="Settings"/>
+
+        </CommandBar>
+        <ToggleSwitch  Name="sw24hour" Header="ToggleSwitch" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top"  Toggled="ToggleSwitch_Toggled"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="509,231,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="WiFi" HorizontalAlignment="Left" Margin="509,81,0,0" VerticalAlignment="Top" Click="WifIButton_Click"/>
+
+    </Grid>
+</Page>
